@@ -1,0 +1,567 @@
+html {
+    background-color: #1f1f1f;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: "roboto";
+}
+h1,h2,h3,h4,h5,h6,p,label,input,li,a {
+    color: #fff;
+    font-family: "roboto";
+}
+p,label,input,li,a{
+    font-size: .8rem;
+}
+
+input, textarea {
+    border: none;
+    padding: .5rem;
+    margin: 1rem 0;
+    border-color: #d1363a;
+}
+textarea:focus, input:focus{
+    outline-color: #d1363a;
+    border: none;
+
+}
+button {
+	padding: .375rem .75rem;
+    color: #fff;
+    font-weight: bolder;
+    border: 1px solid #d1363a;
+	border-radius: .25rem;
+	font-size: 1rem;
+    width: fit-content;
+    line-height: 1.5;
+    background-color: #d1363a;
+}
+button:hover {
+    background-color: #9c262a;
+}
+
+:target {
+    background-color: red;
+}
+.plataform {
+    width: fit-content;
+    font-size: .7rem;
+    font-weight: bolder;
+    border-radius: .4rem;
+    padding: .1rem;
+    margin: 1rem 0;
+    color: #d1363a;
+}
+.title {
+    font-family: "DeadZoneBold";
+    font-size: .8rem ;
+    background: linear-gradient(90deg, #BAC704 0%, #E1FE91 16.67%, #DBFE7A 33.33%, #E1FE91 42.19%, #E1FE91 45.31%, #FFFFFF 54.69%, #FFFFFF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.subtitle {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/******************HEADER**********************/
+.header-container {
+    background-color: #111;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.header-container .logo img {
+    width: 100%;
+    height: 3rem;
+    margin: 1rem 0;
+}
+.header-container .navmenu {
+    margin: .5rem;
+}
+.header-container .navmenu ul li {
+    font-size: .9rem;
+    display: inline;
+    padding: .3rem;
+}
+.navmenu ul li a {
+    transition: all .2s ease-in-out;
+}
+.navmenu ul li a:hover{
+    color: #DBFE7A;
+    padding: .1rem;
+
+}
+/******************HERO**********************/
+.hero {
+    position: relative;
+}
+.hero .hero-img {
+    position: relative;
+    width: 100%;
+    height: 7rem;
+    background-image: url("https://images4.alphacoders.com/478/thumb-1920-47816.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.hero-img:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #040207;
+    position: absolute;
+    top: 0;
+    opacity: .7;
+}
+.hero .hero-text {
+    font-size: .6rem;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+.hero .hero-text .title {
+    font-size: 1.5rem;
+}
+/******************LATEST NEWS**********************/
+.latestnews {
+    width: 100%;
+}
+.latestnews .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.latestnews .cards .card {
+    flex-basis: 100% ;
+    margin: 1rem;
+    text-align: center;
+}
+.latestnews .cards .card .image {
+    width: 100%;
+    border-radius: 1rem;
+}
+.latestnews .cards .card .image img {
+    border-radius: inherit;
+    width: 100%;
+}
+/******************Interest **********************/
+.interest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.interest .cards {
+    display: grid;
+    grid-template-areas: "main main"
+                            "card-1 card-1"
+                            "card-2 card-2"
+                            "card-3 card-3";
+    margin: 1rem 0;
+
+}
+.interest .cards .card {
+    padding: 1rem;
+    margin: 1rem;
+}
+.interest .cards .card:hover {
+    background-color: #111 ;
+    border-radius: .5rem;    
+}
+.interest .cards .card-1 {
+    grid-area: card-1;
+}
+.interest .cards  .card-2 {
+    grid-area: card-2;
+}
+.interest .cards  .card-3 {
+    grid-area: card-3;
+}
+.interest .cards .card img {
+    width: 100%;
+    height: 10rem;
+    border-radius: 1rem;
+}
+.interest .cards .card .news-content {
+    padding: 1rem 0;
+}
+
+.interest .cards .main-news {
+    grid-area: main;
+}
+.interest .cards .main-news .featured {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    grid-area: featured;
+    padding: 1rem;
+}
+.interest .cards .main-news .featured:hover{
+    background-color: #111;
+    border-radius: 1rem;
+}
+.interest .cards .main-news .featured .image {
+    position: relative;
+    width: fit-content;
+    height: 20rem;
+}
+.interest .cards .main-news .featured .image:after{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 100;
+    left: 0;
+    border-radius: 1rem;
+    opacity: .7;
+}
+.interest .cards .main-news .featured .image img{
+    width: 100%;
+    height: 20rem;
+    border-radius: 1rem;
+}
+
+.interest .cards .main-news .featured .news-content {
+    font-size: .9rem;
+    padding: 2rem;
+    position: absolute;
+    bottom: 1.2rem;
+    left: 0;
+    border-radius: 1rem;
+}
+/******************NEWSLETTER **********************/
+.newsletter {
+    background: linear-gradient(100deg, transparent 67%, #d1363a 67%, #d1363a 76.66%), 
+    #ebebeb;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-around;
+}
+.newsletter .news-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+}
+.newsletter .news-content h2 , .newsletter .news-content h3, label  {
+    color: #000;
+}
+.newsletter-form {
+    width: 80%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    justify-content: center;
+}
+.newsletter-form input {
+    width: 100%;
+}
+/***************** GAMES *****************************/
+.games .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.games .cards .card {
+    flex-basis: 100%;
+    position: relative;
+    margin: 2rem;
+    color: #fff;
+    transition: all .1s ease-in;
+}
+.games .cards .card:hover {
+    border: #fff solid .1rem;
+    border-radius: 1rem;
+}
+.games .cards .card .image {
+    position: relative;
+    width: 100%;
+    border-radius: 1rem;
+}
+.games .cards .card .image::after {
+    content: " ";
+    width: 100%;
+    height: 35%;
+    position: absolute;
+    bottom: .2rem;
+    left: 0;
+    background-color: rgba(0, 0, 0, .75);
+    border-radius: 0 0 1rem 1rem;
+}
+.games .cards .card .image img {
+    width: 100%;
+    height: 30rem;
+    border-radius: 1rem;
+}
+
+.games .cards .card .content {
+    position: absolute;
+    top: 65%;
+    padding: .9rem;
+    z-index: 100;
+    height: 35%;
+}
+
+/***************** TRAILER ******************************/
+.trailers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+.trailers .trailer {
+    flex-basis: 100%;
+    padding: 1rem;
+    background-color: #111;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+.trailers .trailer iframe {
+    width: 100%;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+/********************* ABOUT  **************************/
+.about {
+    padding: 1rem;
+}
+.about .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+.about .cards .card {
+    flex-basis: 100%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.about .cards .card .image img {
+    width: 100%;
+    height: 12rem;
+    border-radius: 1rem 1rem 0 0;
+}
+.about .cards .card .divider {
+    margin: .5rem 0;
+    width: 8rem;
+    height: 4px;
+    background-color: #d1363a;
+    border-radius: .5rem;
+}
+.about .cards .card .content p:nth-child(1) {
+    font-size: 1.1rem;
+    padding: .3rem 0;
+    font-weight: bolder;
+}
+.quote {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quote .blockquote {
+    width: 60rem;
+    border-left: 6px solid #BAC704;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 0.5em 10px;
+    quotes: "“" "”" "‘" "’";
+}
+.quote .blockquote::before {
+    color: #BAC704;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    vertical-align: -0.4em;
+}
+.quote .blockquote::after {
+    color: #BAC704;
+    content: close-quote;
+    font-size: 4rem;
+    line-height: 2rem;
+    vertical-align: -.5em;
+}
+.quote .blockquote p {
+    display: inline;
+    font-size: 1rem;
+}
+cite {
+    color: #fff;
+    font-size: 0.8em;
+    font-style: italic;
+    display: block;
+    padding: 1rem 0;
+}
+/****************** CONTACT **********************/
+.form {
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form h2 {
+    color: #000;
+    text-transform: uppercase;
+}
+.form .form-control {
+    width: 20rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+ }
+ .form .form-control .item {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+/******************FOOTER **********************/
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #111;
+}
+.footer .footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer .footer-logo img {
+    width: 6rem;
+    margin: 0 .5rem;
+}
+.footer .footer-nav {
+    padding: .5rem;
+}
+.footer .footer-nav ul li{
+    width: fit-content;
+    display: inline;
+}
+.footer .footer-nav ul li a {
+    color: #8a8887;
+}
+@font-face {
+    font-family: "DeadZoneBold";
+    src: url(../assets/fonts/Dead\ Zone\ Bold.ttf);
+}
+@media (min-width: 768px) {
+    p,label,input,li,a{
+        font-size: 1rem;
+    }
+    
+    .header-container {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+
+    .latestnews .cards .card {
+        flex-basis: 40%;
+    }
+    .interest .cards .card {
+        width: max-content;
+        display: flex;
+        align-items: center;
+    }
+    .latestnews .card .image img {
+        height: 15rem;
+    }
+    .interest .cards .card img {
+        width: 15rem;
+        height: 10rem;
+        border-radius: 1rem;
+        margin: 0 1rem;
+    }
+    .interest .cards .card .news-content {
+        width: 20rem;
+    }
+    .interest .cards .main-news .card {
+        width: 100%;
+    }
+
+    .interest .cards .main-news .featured {
+        width: max-content;
+    }
+    .games .cards .card {
+        flex-basis: 40%;
+    }
+    .trailers .trailer {
+        flex-basis: 40%;
+    }
+    .about .cards .card {
+        flex-basis: 40%;
+    }
+    .footer {
+        flex-direction: row;
+    }
+}
+@media (min-width: 1280px) {
+    .latestnews .cards .card {
+        flex-basis: 24%;
+    }
+    .interest .cards .card .news-content {
+        width: 40rem;
+    }
+    .interest .cards .main-news {
+        display: grid;
+        grid-template-areas: "principal item-1"
+                                "principal item-2";
+        align-items: center;
+    }
+    .interest .cards .main-news .card {
+        width: 40rem;
+        margin: 0;
+    }
+    .interest .cards .main-news .card img {
+        height: 8rem;
+        width: 12rem;
+    }
+    .interest .cards .main-news .featured {
+        grid-area: principal;
+    }
+    .interest .cards .main-news .item-1 {
+        grid-area: item-1;
+    }
+    .interest .cards .main-news .item-2 {
+        grid-area: item-2;
+    } 
+    .newsletter .news-content {
+        width: 40rem;
+    }
+    .games .cards .card {
+        flex-basis: 20%;
+    }
+    .about .cards .card {
+        flex-basis: 22%;
+    }
+    .about .cards .card .image img {
+        height: 15rem;
+    }
+}
